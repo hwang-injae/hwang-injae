@@ -1,20 +1,26 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=22C3E6&center=true&vCenter=true&width=680&lines=Physical+AI+%26+Robotics+Software;ROS+2+%7C+Computer+Vision+%7C+Collaborative+Robots;Turning+perception+into+robot+motion" alt="typing banner" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=22C3E6&center=true&vCenter=true&width=560&lines=Physical+AI+%26+Robotics+Software;ROS+2+%7C+Computer+Vision+%7C+Cobots" alt="typing banner" />
 </p>
 
 <h1 align="center">Hi there, I'm Injae Hwang 👋</h1>
+
+<br>
 
 ## About Me
 
 - 🎓 **국립부경대학교 화학과 졸업 예정**입니다.
 - 🧪 지금은 **Physical AI · 로보틱스 소프트웨어** 분야로 커리어를 전환하고 있습니다.
 - 🤖 **두산로보틱스 ROKEY 부트캠프**에서 Python, Computer Vision, ROS 2, 협동로봇·지능형로봇 프로그래밍을 학습하고 있습니다.
-- 🔨 현재 팀 프로젝트를 진행 중입니다.
+- 🔨 부트캠프에서 팀 프로젝트를 진행하며 실무 흐름을 익히고 있습니다.
+
+<br>
 
 ## 🎯 Focus / Keywords
 
 `Physical AI` · `Robotics` · `ROS 2` · `Collaborative Robots` · `Intelligent Robots` ·
 `Robot Manipulation` · `Computer Vision` · `Deep Learning`
+
+<br>
 
 ## 🌱 Currently Learning
 
@@ -22,6 +28,8 @@
 - 협동로봇 / 지능형로봇 프로그래밍
 - OpenCV 기반 이미지 처리 · 객체 인식
 - 딥러닝 기반 인식(perception)
+
+<br>
 
 ## 🛠️ Tech Stack
 
@@ -35,13 +43,32 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-## 🚧 Projects
+<br>
 
-> ROKEY 부트캠프 팀 프로젝트를 진행 중입니다. 완료되면 여기에 정리할 예정입니다.
-> (프로젝트명 — 한 줄 설명 — 담당 역할 — 사용 기술 — 데모/링크)
+## 🚀 Projects
 
-<!-- 프로젝트가 생기고 커밋이 며칠 쌓이면, 아래 <!--  --> 두 줄만 지우면 통계가 살아납니다.
+### [Gesture-Controlled Robot Tracking](https://github.com/hwang-injae/gesture-controlled-robot-tracking)
 
+ROKEY 부트캠프 5인 팀 프로젝트 · 손 제스처로 로봇의 물체 추적을 제어
+(ROS 2 · OpenCV · MediaPipe · turtlesim / Gazebo)
+
+**담당: 상태 및 이동 제어**
+- 제어 인터페이스 계약(오차 부호·QoS·파라미터) 설계
+- 비례 제어 알고리즘 및 추적 상태 머신 구현
+- STOP·미검출·타임아웃 시 안전 정지 로직
+- 제어 로직 단위 테스트 작성
+
+<br>
+
+## 📫 Connect
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:il1282113@gmail.com)
+
+<!-- 링크드인 계정을 만들면 아래 줄의 주석을 풀고 주소를 넣으세요
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](LINKEDIN_URL)
+-->
+
+<!-- 공개 저장소에 커밋이 쌓이면 아래 주석을 풀어 통계 카드를 활성화하세요
 ## 📊 GitHub Stats
 
 <p align="center">
@@ -51,13 +78,4 @@
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hwang-injae&layout=compact&theme=tokyonight&hide_border=true" alt="top languages" />
 </p>
-
--->
-
-## 📫 Connect
-
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:il1282113@gmail.com)
-
-<!-- 링크드인 계정 만들면 아래 줄 주석 해제하고 주소 넣기
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](LINKEDIN_URL)
 -->
