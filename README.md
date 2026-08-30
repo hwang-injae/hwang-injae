@@ -40,4 +40,24 @@
 > ROKEY 부트캠프 팀 프로젝트를 진행 중입니다. 완료되면 여기에 정리할 예정입니다.
 > (프로젝트명 — 한 줄 설명 — 담당 역할 — 사용 기술 — 데모/링크)
 
-<!-- 프로젝트가 생기고 커밋이 며칠 쌓이면,
+<!-- 프로젝트가 생기고 커밋이 며칠 쌓이면, 아래 <!--  --> 두 줄만 지우면 통계가 살아납니다.
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=hwang-injae&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" alt="github stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=hwang-injae&theme=tokyonight&hide_border=true" alt="streak" />
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hwang-injae&layout=compact&theme=tokyonight&hide_border=true" alt="top languages" />
+</p>
+
+-->
+
+## 📫 Connect
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:il1282113@gmail.com)
+
+<!-- 링크드인 계정 만들면 아래 줄 주석 해제하고 주소 넣기
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](LINKEDIN_URL)
+-->
