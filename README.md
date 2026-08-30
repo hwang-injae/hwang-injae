@@ -6,15 +6,15 @@
 
 ## About Me
 
-- 🧪 화학(Chemistry)을 전공했고, 지금은 **Physical AI · 로보틱스 소프트웨어** 분야로 커리어를 전환하고 있습니다.
+- 🎓 **국립부경대학교 화학과 졸업 예정**입니다.
+- 🧪 지금은 **Physical AI · 로보틱스 소프트웨어** 분야로 커리어를 전환하고 있습니다.
 - 🤖 **두산로보틱스 ROKEY 부트캠프**에서 Python, Computer Vision, ROS 2, 협동로봇·지능형로봇 프로그래밍을 학습하고 있습니다.
 - 🔨 현재 팀 프로젝트를 진행 중입니다.
-- 💬 로봇이 현실 세계에서 인식하고 움직이는 것(Embodied AI)에 관심이 많습니다.
 
 ## 🎯 Focus / Keywords
 
-`Physical AI` · `Embodied AI` · `Robotics` · `ROS 2` · `Collaborative Robots` ·
-`Intelligent Robots` · `Robot Manipulation` · `Computer Vision` · `Deep Learning` · `Sim-to-Real`
+`Physical AI` · `Robotics` · `ROS 2` · `Collaborative Robots` · `Intelligent Robots` ·
+`Robot Manipulation` · `Computer Vision` · `Deep Learning`
 
 ## 🌱 Currently Learning
 
