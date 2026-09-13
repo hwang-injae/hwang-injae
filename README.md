@@ -10,11 +10,8 @@
 
 - 🎓 **국립부경대학교 화학과 졸업 예정**입니다.
 - 🧪 지금은 **Physical AI · 로보틱스 소프트웨어** 분야로 커리어를 전환하고 있습니다.
-<!-- ↓ 전환 계기를 한 줄로 적고 주석을 풀어 주세요 (예: 실험 자동화 장비를 다루며 로봇에 관심을 갖게 되었습니다)
-- 💡 여기에 전환 계기를 적어 주세요.
--->
-- 🤖 **두산로보틱스 ROKEY 부트캠프**에서 Python, Computer Vision, ROS 2, 협동로봇·지능형로봇 프로그래밍을 학습하고 있습니다.
-<!-- ↑ 부트캠프 기간을 넣으려면 위 줄 끝에 추가하세요 (예: … 학습하고 있습니다. (2026.00 ~ 2026.00)) -->
+- 💡 AI가 사회를 빠르게 바꾸는 모습을 보며 AI를 더 깊이 공부하고 싶어졌고, AI가 실제 세계에서 움직이는 로보틱스로 방향을 정했습니다.
+- 🤖 **두산로보틱스 ROKEY 부트캠프**에서 Python, Computer Vision, ROS 2, 협동로봇·지능형로봇 프로그래밍을 학습하고 있습니다. (2026.04 ~ 2026.10)
 - 🔨 부트캠프에서 팀 프로젝트를 진행하며 실무 흐름을 익히고 있습니다.
 
 <br>
@@ -76,10 +73,7 @@ ROKEY 부트캠프 5인 팀 프로젝트 (2026.07 ~ 2026.08) · 손 제스처로
 ## 📫 Connect
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:il1282113@gmail.com)
-
-<!-- 링크드인 계정을 만들면 아래 줄의 주석을 풀고 주소를 넣으세요
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](LINKEDIN_URL)
--->
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hwang-injae/)
 
 <!-- 공개 저장소에 커밋이 쌓이면 아래 주석을 풀어 통계 카드를 활성화하세요
 ## 📊 GitHub Stats
