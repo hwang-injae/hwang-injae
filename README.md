@@ -10,7 +10,11 @@
 
 - 🎓 **국립부경대학교 화학과 졸업 예정**입니다.
 - 🧪 지금은 **Physical AI · 로보틱스 소프트웨어** 분야로 커리어를 전환하고 있습니다.
+<!-- ↓ 전환 계기를 한 줄로 적고 주석을 풀어 주세요 (예: 실험 자동화 장비를 다루며 로봇에 관심을 갖게 되었습니다)
+- 💡 여기에 전환 계기를 적어 주세요.
+-->
 - 🤖 **두산로보틱스 ROKEY 부트캠프**에서 Python, Computer Vision, ROS 2, 협동로봇·지능형로봇 프로그래밍을 학습하고 있습니다.
+<!-- ↑ 부트캠프 기간을 넣으려면 위 줄 끝에 추가하세요 (예: … 학습하고 있습니다. (2026.00 ~ 2026.00)) -->
 - 🔨 부트캠프에서 팀 프로젝트를 진행하며 실무 흐름을 익히고 있습니다.
 
 <br>
@@ -27,20 +31,25 @@
 - ROS 2 (topics, services, actions, launch) — Python
 - 협동로봇 / 지능형로봇 프로그래밍
 - OpenCV 기반 이미지 처리 · 객체 인식
-- 딥러닝 기반 인식(perception)
+- PyTorch 기반 딥러닝 인식(perception)
 
 <br>
 
 ## 🛠️ Tech Stack
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+**Robotics**<br>
 ![ROS 2](https://img.shields.io/badge/ROS_2-22314E?style=for-the-badge&logo=ros&logoColor=white)
-![Physical AI](https://img.shields.io/badge/Physical_AI-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![Gazebo](https://img.shields.io/badge/Gazebo-F58113?style=for-the-badge&logoColor=white)
+
+**Vision**<br>
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=mediapipe&logoColor=white)
+
+**Language · Tools**<br>
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 <br>
@@ -49,14 +58,16 @@
 
 ### [Gesture-Controlled Robot Tracking](https://github.com/hwang-injae/gesture-controlled-robot-tracking)
 
-ROKEY 부트캠프 5인 팀 프로젝트 · 손 제스처로 로봇의 물체 추적을 제어
+ROKEY 부트캠프 5인 팀 프로젝트 (2026.07 ~ 2026.08) · 손 제스처로 로봇의 물체 추적을 제어
 (ROS 2 · OpenCV · MediaPipe · turtlesim / Gazebo)
+
+<!-- 시연 GIF가 준비되면 README 편집 화면에 GIF를 드래그해서 이 자리에 넣으세요 -->
 
 **담당: 상태 및 이동 제어**
 - 제어 인터페이스 계약(오차 부호·QoS·파라미터) 설계
 - 비례 제어 알고리즘 및 추적 상태 머신 구현
 - STOP·미검출·타임아웃 시 안전 정지 로직
-- 제어 로직 단위 테스트 작성
+- 제어 로직 단위 테스트 작성 (pytest)
 
 <br>
 
