@@ -30,6 +30,7 @@
 
 - ROS 2 (topics, services, actions, launch) — Python
 - 협동로봇 / 지능형로봇 프로그래밍
+- NVIDIA Isaac Sim 기반 로봇 시뮬레이션
 - OpenCV 기반 이미지 처리 · 객체 인식
 - PyTorch 기반 딥러닝 인식(perception)
 
@@ -40,6 +41,7 @@
 **Robotics**<br>
 ![ROS 2](https://img.shields.io/badge/ROS_2-22314E?style=for-the-badge&logo=ros&logoColor=white)
 ![Gazebo](https://img.shields.io/badge/Gazebo-F58113?style=for-the-badge&logoColor=white)
+![Isaac Sim](https://img.shields.io/badge/Isaac_Sim-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
 
 **Vision**<br>
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
