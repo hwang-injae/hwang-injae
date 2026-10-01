@@ -55,12 +55,57 @@
 
 ## 🚀 Projects
 
+### [PreWash-Cell — 다회용기 예비세척 자동화 셀](https://github.com/hwang-injae/rokey_9_pjt1_D2)
+
+두산 M0609 협동로봇이 반납된 다회용 그릇·컵을 집어 잔반을 털고, 안쪽을 힘 제어로 닦아 식기세척기 팔레트에 꽂는 자동화 셀입니다.
+카메라 없이 **파지 폭 · 무게 · 힘**만으로 판단합니다.
+
+`ROKEY 협동-1` · `4인 팀` · `2026.09` · `Doosan M0609 + OnRobot RG2` · `ROS 2 Jazzy` · `FastAPI · Next.js · SQLite`
+
+<img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt1_D2/main/docs/images/hmi_running.png" width="640" alt="PreWash-Cell 운영 화면">
+
+**담당: PM · 인터페이스 · 운영 화면(HMI)·기록 DB · 셀 통합**
+- 두산 Python API가 ROS 콜백 안에서 멈추는 문제를 재현·확인하고, 실행 구조 5가지를 비교해 구조 변경을 결정했습니다. 기능 사이 인터페이스(`contracts.py`)를 먼저 고정해 4명이 로봇 1대를 나눠 쓰면서도 각자 개발할 기준을 만들었습니다.
+- 운영 화면(시작·일시정지·재개·중단, 멈춤 원인 안내, 누적 통계)과 SQLite 기록 DB를 맡았습니다.
+- 셀 통합과 실기 운용을 맡아 기능 동결 시점과 "기본 흐름은 유지하고 예외 처리만 고친다"는 원칙을 정했고, 무게값이 출렁이는 원인(그리퍼 케이블 장력)을 찾아냈습니다.
+
+**결과(팀):** 배속 1.0에서 그릇 2개·컵 2개를 사람 개입 없이 무정지 완주(약 13분, 9/29 실기) · 예외 6종 복구와 빈 구역 건너뛰기 실기 확인
+
+<br>
+
+### [AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/rokey_9_pjt3_C2)
+
+Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A/B/C·불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
+
+`ROKEY 협동-3` · `4인 팀` · `2026.08` · `Isaac Sim 5.1` · `ROS 2 Jazzy` · `Lula IK`
+
+<img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt3_C2/main/docs/images/demo_full_pipeline.gif" width="640" alt="전체 공정 Top View (15배속)">
+
+**담당: P3020 협동로봇 Pick & Place · 비전 연동**
+- Pick & Place를 8단계 상태 머신으로 작성하고, IK 목표에 TCP 오프셋 보정과 관절 안전 한계를 넣었습니다.
+- 팀원이 만든 YOLO 검출 결과와 Depth로 박스 윗면의 3D 좌표를 구하고, 거리·색상·높이 3단 필터로 그리퍼·그림자·AMR 몸체 오탐을 걸렀습니다.
+- Isaac Sim 내장 Python(3.11)에서 ROS 2 커스텀 액션 서버가 실패하는 문제를, 액션 서버를 시스템 Python 프로세스로 분리하고 토픽으로 잇는 방식으로 해결했습니다.
+- 불량품 라인(P3020 OUT)은 입고 쪽 IK·상태 머신·좌표 계산 로직을 재사용해 작성하고, 팔에서 먼 칸부터 2×2로 채우는 적재 순서를 적용했습니다.
+
+<br>
+
+### [IDC 순찰로봇 — TurtleBot4 2대 협동 순찰 MVP](https://github.com/yujh5537/rokey_idc_patrol)
+
+TurtleBot4 2대가 미니 IDC(랙 56기)를 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 것을 목표로 한 팀 MVP입니다.
+
+`ROKEY 지능-1` · `8인 팀` · `2026.09 (1주)` · `ROS 2 Jazzy` · `TurtleBot4 · Nav2` · `YOLO`
+
+**담당: PM(프로젝트 매니저) — 설계 문서 · 일정 · 데이터**
+- 요구사항·설계 문서(BRD·SRD·SDD) 작성과 개정에 참여하고, 시나리오가 바뀔 때 PL과 함께 일정을 다시 짰습니다. 통합 테스트 전에 파트별 단위 테스트 7개 항목을 일정에 넣었습니다.
+- 라벨링 환경과 초기 라벨링 가이드·검수 규칙을 만들고, 도어 열림/닫힘 데이터 수집과 라벨링에 참여했습니다.
+- YOLOX nano·s 후보 모델을 학습했습니다.
+
+<br>
+
 ### [Gesture-Controlled Robot Tracking](https://github.com/hwang-injae/gesture-controlled-robot-tracking)
 
-ROKEY 부트캠프 5인 팀 프로젝트 (2026.07 ~ 2026.08) · 손 제스처로 로봇의 물체 추적을 제어
+ROKEY 부트캠프 스터디 5인 팀 프로젝트 (2026.07 ~ 2026.08) · 손 제스처로 로봇의 물체 추적을 제어
 (ROS 2 · OpenCV · MediaPipe · turtlesim / Gazebo)
-
-<!-- 시연 GIF가 준비되면 README 편집 화면에 GIF를 드래그해서 이 자리에 넣으세요 -->
 
 **담당: 상태 및 이동 제어**
 - 제어 인터페이스 계약(오차 부호·QoS·파라미터) 설계
