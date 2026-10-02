@@ -91,11 +91,13 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 <br>
 
-### [IDC 순찰로봇 — TurtleBot4 2대 협동 순찰 MVP](https://github.com/yujh5537/rokey_idc_patrol)
+### [IDC 순찰로봇 — TurtleBot4 2대 협동 순찰 MVP](https://github.com/hwang-injae/rokey_idc_patrol)
 
 TurtleBot4 2대가 미니 IDC(랙 56기)를 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 것을 목표로 한 팀 MVP입니다.
 
 `ROKEY 지능-1` · `8인 팀` · `2026.09 (1주)` · `ROS 2 Jazzy` · `TurtleBot4 · Nav2` · `YOLO`
+
+<img src="https://raw.githubusercontent.com/hwang-injae/rokey_idc_patrol/main/docs/images/demo.gif" width="640" alt="랙 도어 YOLO 검출과 로봇 2대 매핑 화면">
 
 **담당: PM(프로젝트 매니저) — 설계 문서 · 일정 · 데이터**
 - 요구사항·설계 문서(BRD·SRD·SDD) 작성과 개정에 참여하고, 시나리오가 바뀔 때 PL과 함께 일정을 다시 짰습니다. 통합 테스트 전에 파트별 단위 테스트 7개 항목을 일정에 넣었습니다.
