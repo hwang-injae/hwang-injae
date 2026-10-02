@@ -113,7 +113,7 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 순찰하며 열린 랙 도어는 YO
 | 미니프로젝트 | 내용 | 스택 | 상태 |
 |---|---|---|---|
 | [M0609 기어 조립: DRL → ROS 2 Python](https://github.com/hwang-injae/rokey-mini-projects/tree/main/m0609-gear-drl-to-ros2) | 티치 펜던트로 만든 기어 조립 동작을 ROS 2 Python 노드로 옮기며 달라진 점을 고쳐 실제 로봇에서 완주 | Doosan M0609 · DSR_ROBOT2 · 힘제어 | ✅ |
-| [Isaac Sim M0609 색상 분류](https://github.com/hwang-injae/rokey-mini-projects/tree/main/isaac-m0609-color-sort) | 로봇팔 카메라 영상에서 큐브 색을 판별해 돌려주는 ROS 2 색 감지 노드 | Isaac Sim · ROS 2 · OpenCV | ✅ |
+| [Isaac Sim M0609 색상 분류](https://github.com/hwang-injae/rokey-mini-projects/tree/main/isaac-m0609-color-sort) | 로봇팔 카메라 영상에서 큐브 색을 판별하는 ROS 2 색 감지 노드 (협동-3 사전 실습 · 담당: 팀원이 만든 노드를 파랑·초록 시나리오에 맞게 수정하고 Isaac Sim과 연동) | Isaac Sim · ROS 2 · OpenCV | ✅ |
 | [TurtleBot4 RC카 탐색·추적](https://github.com/hwang-injae/rokey-mini-projects/tree/main/tb4-rc-car-search-track) | 웹캠이 RC카를 인식하면 AMR이 출동해 회전 탐색 후 추종 (4인 팀 · 담당: 웹캠 RC카 인식) | TurtleBot4 · Nav2 · YOLO11n | 🟡 미완성 |
 | [Gesture-Controlled Robot Tracking](https://github.com/hwang-injae/gesture-controlled-robot-tracking) | 손 제스처로 로봇의 물체 추적을 시작·정지 (ROKEY 스터디 5인 팀 · 담당: 상태·이동 제어 — 비례 제어, 상태 머신, 안전 정지, pytest) | ROS 2 · OpenCV · MediaPipe | ✅ |
 
