@@ -75,13 +75,13 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 <br>
 
-### [AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/rokey_9_pjt3_C2)
+### [AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/cobot3-ws-c2)
 
 Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A/B/C·불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
 
 `ROKEY 협동-3` · `4인 팀` · `2026.08` · `Isaac Sim 5.1` · `ROS 2 Jazzy` · `Lula IK`
 
-<img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt3_C2/main/docs/images/demo_full_pipeline.gif" width="640" alt="전체 공정 Top View (15배속)">
+<img src="https://raw.githubusercontent.com/rokey-c2/cobot3-ws-c2/main/docs/screenshots/top-view-x5.gif" width="640" alt="Warehouse Top View — AMR, P3020, Conveyor, Wheel Sorter 전체 공정">
 
 **담당: P3020 협동로봇 Pick & Place · 비전 연동**
 - Pick & Place를 8단계 상태 머신으로 작성하고, IK 목표에 TCP 오프셋 보정과 관절 안전 한계를 넣었습니다.
