@@ -117,16 +117,16 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 ### [IDC 순찰로봇 — TurtleBot4 2대 협동 순찰 MVP](https://github.com/hwang-injae/idc-patrol-robot)
 
-TurtleBot4 2대가 미니 IDC(랙 56기)를 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 것을 목표로 한 팀 MVP입니다.
+TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 팀 MVP입니다. 로봇 2대 분담 SLAM 매핑 · 지도 병합과 실제 카메라의 도어 검출까지 시연했습니다.
 
-`ROKEY 지능-1` · `8인 팀` · `2026.09 (1주)` · `ROS 2 Jazzy` · `TurtleBot4 · Nav2` · `YOLO`
+`ROKEY 지능-1` · `8인 팀` · `2026.09 (6일)` · `ROS 2 Jazzy` · `TurtleBot4 · Nav2` · `YOLO`
 
 <img src="https://raw.githubusercontent.com/hwang-injae/idc-patrol-robot/main/docs/images/demo.gif" width="640" alt="랙 도어 YOLO 검출과 로봇 2대 매핑 화면">
 
-**담당: PM(프로젝트 매니저) — 설계 문서 · 일정 · 데이터**
-- 요구사항·설계 문서(BRD·SRD·SDD) 작성과 개정에 참여하고, 시나리오가 바뀔 때 PL과 함께 일정을 다시 짰습니다. 통합 테스트 전에 파트별 단위 테스트 7개 항목을 일정에 넣었습니다.
-- 라벨링 환경과 초기 라벨링 가이드·검수 규칙을 만들고, 도어 열림/닫힘 데이터 수집과 라벨링에 참여했습니다.
-- YOLOX nano·s 후보 모델을 학습했습니다.
+**담당: PM(프로젝트 매니저) — 시스템 구조도 · 설계 문서 · 일정 · 데이터**
+- PC 4대 전체 구조도와 발표용 파트별 구조도 3장(AMR·Vision·관제)을 설계 문서의 최신 결정에 맞춰 정리하고, 요구사항·설계 문서(BRD·SRD·SDD) 작성과 개정에 참여했습니다.
+- 9/7부터 팀원별 할 일을 정해 알리고, 진행 상황을 받아 일정을 조정했습니다.
+- 라벨링 환경과 초기 라벨링 가이드·검수 규칙을 만들고, 도어 열림/닫힘 데이터 수집과 라벨링에 참여했습니다. YOLOX nano·s 후보 모델도 학습했습니다.
 
 <br>
 
