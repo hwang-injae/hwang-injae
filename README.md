@@ -64,17 +64,20 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 `ROKEY 협동-2` · `5인 팀` · `2026.10` · `Doosan M0609 + OnRobot RG2` · `ROS 2 Jazzy · MoveIt2` · `YOLO seg` · `FastAPI · Next.js · PostgreSQL · MQTT`
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt2_D2/main/docs/images/%ED%94%8C%EB%A1%9C%EC%9A%B0%EC%B0%A8%ED%8A%B8_v1_101610_dark.png">
-  <img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt2_D2/main/docs/images/%ED%94%8C%EB%A1%9C%EC%9A%B0%EC%B0%A8%ED%8A%B8_v1_101610_light.png" width="640" alt="BuildMind 전체 흐름 — 요청 · AI 설계 생성 · 검사 · DB 저장 · 로봇 조립 · 스캔 복제 플로우 차트">
-</picture>
+<table>
+  <tr>
+    <td width="50%" align="center"><img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt2_D2/main/docs/images/demo/%EB%8D%B0%EB%AA%A8_AI%EC%84%A4%EA%B3%84%EC%83%9D%EC%84%B1_v1_101715.gif" width="100%" alt="말로 요청 → Claude 설계 후보 3개 → 3D 미리보기"><br><sub>요청 → AI 설계 후보 → 3D 미리보기</sub></td>
+    <td width="50%" align="center"><img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt2_D2/main/docs/images/demo/%EB%8D%B0%EB%AA%A8_%EC%8A%A4%EC%BA%94%EB%B3%B5%EC%A0%9C_v1_101715.gif" width="100%" alt="스캔한 구조물을 같은 자리 · 방향 · 모양으로 복제 조립"><br><sub>스캔한 구조물을 그대로 복제 조립</sub></td>
+  </tr>
+</table>
 
 **담당: PL · HMI(웹 화면 · AI 설계 생성 · 설계 DB · MQTT 다리)**
-- PL로 일정과 발표를 맡았습니다.
-- 웹 화면에서 글·음성으로 받은 요청을 Claude가 설계도 후보로 만들고, 검사에서 떨어지면 까닭을 돌려줘 다시 만들게 하는 AI 설계 생성 흐름을 맡았습니다.
-- PostgreSQL에 설계를 부모 설계와 이어 세대별로 저장하고 조립 결과·AI 호출 기록을 남기는 설계 DB, 로봇 PC와 웹 PC를 잇는 MQTT 다리, 웹 PC Docker compose 구성을 맡았습니다.
+- **AI 설계 생성** — 웹 PC의 Claude Code를 호스트 중계(`claude_bridge`)로 불러 설계도 후보 3개를 만들게 했습니다. JSON Schema 구조화 출력으로 형식 실패 0, 검사에서 떨어지면 까닭을 돌려줘 최대 2번 다시 만듭니다.
+- **설계 DB 세대 관리** — PostgreSQL에 설계를 부모·버전으로 이어 저장하고, 같은 Template의 설계를 AI가 골라 참고하는 RAG를 붙였습니다(파생 설계 15개·3세대).
+- **웹 화면 · MQTT 다리** — Next.js + three.js 화면(설계 3D 미리보기·손목 카메라·로봇 패널), 로봇 PC와 웹 PC를 잇는 MQTT 다리, 웹 PC Docker compose 구성을 맡았습니다.
+- **PL** — 일정·결정 기록·발표를 맡고, 기능 동결 뒤에는 PL 통합 브랜치(1~10차)에서 통합 테스트를 거친 판만 main에 넣었습니다.
 
-**결과(팀, 10/15 실기):** 벤치 설계 11블록 자동 조립 완성 · 흩어진 블록 집기 35/35 · AI가 만든 설계 2종 실제 조립 · 사람이 쌓은 벤치 스캔 복원 일치율 100%
+**결과(팀):** 통합 시험에서 흩어진 블록 집기 98%(159/162) · 스캔 복원 일치율 92% · AI 설계 형식 실패 0 · AI가 만든 설계 2종 실제 조립
 
 <br>
 
