@@ -99,7 +99,7 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 <br>
 
-### [AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/cobot3-ws-c2)
+### [AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/amr-cobot-sorting)
 
 Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A/B/C·불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
 
