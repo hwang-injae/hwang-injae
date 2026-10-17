@@ -57,7 +57,7 @@
 
 ROKEY 9기 정규 팀 프로젝트입니다.
 
-### [BuildMind — AI가 설계하고 로봇이 조립하는 젠가 가구](https://github.com/hwang-injae/rokey_9_pjt2_D2)
+### [BuildMind — AI가 설계하고 로봇이 조립하는 젠가 가구](https://github.com/hwang-injae/buildmind)
 
 사람이 글이나 말로 가구를 요청하면 AI(Claude)가 젠가 블록 설계도를 만들고, 무너지지 않는지·로봇이 지을 수 있는지 검사를 통과한 설계만 DB에 세대별로 저장합니다.
 두산 M0609가 흩어진 블록을 손목 카메라(**YOLO seg + 깊이**)로 찾아 **MoveIt2**로 하나씩 집어 조립하고, 사람이 쌓은 구조물을 스캔해 똑같이 복제할 수도 있습니다.
@@ -66,8 +66,8 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt2_D2/main/docs/images/demo/%EB%8D%B0%EB%AA%A8_AI%EC%84%A4%EA%B3%84%EC%83%9D%EC%84%B1_v1_101715.gif" width="100%" alt="말로 요청 → Claude 설계 후보 3개 → 3D 미리보기"><br><sub>요청 → AI 설계 후보 → 3D 미리보기</sub></td>
-    <td width="50%" align="center"><img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt2_D2/main/docs/images/demo/%EB%8D%B0%EB%AA%A8_%EC%8A%A4%EC%BA%94%EB%B3%B5%EC%A0%9C_v1_101715.gif" width="100%" alt="스캔한 구조물을 같은 자리 · 방향 · 모양으로 복제 조립"><br><sub>스캔한 구조물을 그대로 복제 조립</sub></td>
+    <td width="50%" align="center"><img src="https://raw.githubusercontent.com/hwang-injae/buildmind/main/docs/images/demo/%EB%8D%B0%EB%AA%A8_AI%EC%84%A4%EA%B3%84%EC%83%9D%EC%84%B1_v1_101715.gif" width="100%" alt="말로 요청 → Claude 설계 후보 3개 → 3D 미리보기"><br><sub>요청 → AI 설계 후보 → 3D 미리보기</sub></td>
+    <td width="50%" align="center"><img src="https://raw.githubusercontent.com/hwang-injae/buildmind/main/docs/images/demo/%EB%8D%B0%EB%AA%A8_%EC%8A%A4%EC%BA%94%EB%B3%B5%EC%A0%9C_v1_101715.gif" width="100%" alt="스캔한 구조물을 같은 자리 · 방향 · 모양으로 복제 조립"><br><sub>스캔한 구조물을 그대로 복제 조립</sub></td>
   </tr>
 </table>
 
@@ -81,14 +81,14 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 <br>
 
-### [PreWash-Cell — 다회용기 예비세척 자동화 셀](https://github.com/hwang-injae/rokey_9_pjt1_D2)
+### [PreWash-Cell — 다회용기 예비세척 자동화 셀](https://github.com/hwang-injae/prewash-cell)
 
 두산 M0609 협동로봇이 반납된 다회용 그릇·컵을 집어 잔반을 털고, 안쪽을 힘 제어로 닦아 식기세척기 팔레트에 꽂는 자동화 셀입니다.
 카메라 없이 **파지 폭 · 무게 · 힘**만으로 판단합니다.
 
 `ROKEY 협동-1` · `4인 팀` · `2026.09` · `Doosan M0609 + OnRobot RG2` · `ROS 2 Jazzy` · `FastAPI · Next.js · SQLite`
 
-<img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt1_D2/main/docs/images/hmi_running.png" width="640" alt="PreWash-Cell 운영 화면">
+<img src="https://raw.githubusercontent.com/hwang-injae/prewash-cell/main/docs/images/hmi_running.png" width="640" alt="PreWash-Cell 운영 화면">
 
 **담당: PM · 인터페이스 · 운영 화면(HMI)·기록 DB · 셀 통합**
 - 두산 Python API가 ROS 콜백 안에서 멈추는 문제를 재현·확인하고, 실행 구조 5가지를 비교해 구조 변경을 결정했습니다. 기능 사이 인터페이스(`contracts.py`)를 먼저 고정해 4명이 로봇 1대를 나눠 쓰면서도 각자 개발할 기준을 만들었습니다.
