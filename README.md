@@ -57,6 +57,27 @@
 
 ROKEY 9기 정규 팀 프로젝트입니다.
 
+### [BuildMind — AI가 설계하고 로봇이 조립하는 젠가 가구](https://github.com/hwang-injae/rokey_9_pjt2_D2)
+
+사람이 글이나 말로 가구를 요청하면 AI(Claude)가 젠가 블록 설계도를 만들고, 무너지지 않는지·로봇이 지을 수 있는지 검사를 통과한 설계만 DB에 세대별로 저장합니다.
+두산 M0609가 흩어진 블록을 손목 카메라(**YOLO seg + 깊이**)로 찾아 **MoveIt2**로 하나씩 집어 조립하고, 사람이 쌓은 구조물을 스캔해 똑같이 복제할 수도 있습니다.
+
+`ROKEY 협동-2` · `5인 팀` · `2026.10` · `Doosan M0609 + OnRobot RG2` · `ROS 2 Jazzy · MoveIt2` · `YOLO seg` · `FastAPI · Next.js · PostgreSQL · MQTT`
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt2_D2/main/docs/images/%ED%94%8C%EB%A1%9C%EC%9A%B0%EC%B0%A8%ED%8A%B8_v1_101610_dark.png">
+  <img src="https://raw.githubusercontent.com/hwang-injae/rokey_9_pjt2_D2/main/docs/images/%ED%94%8C%EB%A1%9C%EC%9A%B0%EC%B0%A8%ED%8A%B8_v1_101610_light.png" width="640" alt="BuildMind 전체 흐름 — 요청 · AI 설계 생성 · 검사 · DB 저장 · 로봇 조립 · 스캔 복제 플로우 차트">
+</picture>
+
+**담당: PL · HMI(웹 화면 · AI 설계 생성 · 설계 DB · MQTT 다리)**
+- PL로 일정과 발표를 맡았습니다.
+- 웹 화면에서 글·음성으로 받은 요청을 Claude가 설계도 후보로 만들고, 검사에서 떨어지면 까닭을 돌려줘 다시 만들게 하는 AI 설계 생성 흐름을 맡았습니다.
+- PostgreSQL에 설계를 부모 설계와 이어 세대별로 저장하고 조립 결과·AI 호출 기록을 남기는 설계 DB, 로봇 PC와 웹 PC를 잇는 MQTT 다리, 웹 PC Docker compose 구성을 맡았습니다.
+
+**결과(팀, 10/15 실기):** 벤치 설계 11블록 자동 조립 완성 · 흩어진 블록 집기 35/35 · AI가 만든 설계 2종 실제 조립 · 사람이 쌓은 벤치 스캔 복원 일치율 100%
+
+<br>
+
 ### [PreWash-Cell — 다회용기 예비세척 자동화 셀](https://github.com/hwang-injae/rokey_9_pjt1_D2)
 
 두산 M0609 협동로봇이 반납된 다회용 그릇·컵을 집어 잔반을 털고, 안쪽을 힘 제어로 닦아 식기세척기 팔레트에 꽂는 자동화 셀입니다.
