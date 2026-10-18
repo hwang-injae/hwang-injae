@@ -81,6 +81,22 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 <br>
 
+### [AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/amr-cobot-sorting)
+
+Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A/B/C·불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
+
+`ROKEY 협동-3` · `4인 팀` · `2026.08` · `Isaac Sim 5.1` · `ROS 2 Jazzy` · `Lula IK`
+
+<img src="https://raw.githubusercontent.com/rokey-c2/cobot3-ws-c2/main/docs/screenshots/top-view-x5.gif" width="640" alt="Warehouse Top View — AMR, P3020, Conveyor, Wheel Sorter 전체 공정">
+
+**담당: P3020 협동로봇 Pick & Place · 비전 연동**
+- Pick & Place를 8단계 상태 머신으로 작성하고, IK 목표에 TCP 오프셋 보정과 관절 안전 한계를 넣었습니다.
+- 팀원이 만든 YOLO 검출 결과와 Depth로 박스 윗면의 3D 좌표를 구하고, 거리·색상·높이 3단 필터로 그리퍼·그림자·AMR 몸체 오탐을 걸렀습니다.
+- Isaac Sim 내장 Python(3.11)에서 ROS 2 커스텀 액션 서버가 실패하는 문제를, 액션 서버를 시스템 Python 프로세스로 분리하고 토픽으로 잇는 방식으로 해결했습니다.
+- 불량품 라인(P3020 OUT)은 입고 쪽 IK·상태 머신·좌표 계산 로직을 재사용해 작성하고, 팔에서 먼 칸부터 2×2로 채우는 적재 순서를 적용했습니다.
+
+<br>
+
 ### [PreWash-Cell — 다회용기 예비세척 자동화 셀](https://github.com/hwang-injae/prewash-cell)
 
 두산 M0609 협동로봇이 반납된 다회용 그릇·컵을 집어 잔반을 털고, 안쪽을 힘 제어로 닦아 식기세척기 팔레트에 꽂는 자동화 셀입니다.
@@ -96,22 +112,6 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 - 셀 통합과 실기 운용을 맡아 기능 동결 시점과 "기본 흐름은 유지하고 예외 처리만 고친다"는 원칙을 정했고, 무게값이 출렁이는 원인(그리퍼 케이블 장력)을 찾아냈습니다.
 
 **결과(팀):** 배속 1.0에서 그릇 2개·컵 2개를 사람 개입 없이 무정지 완주(약 13분, 9/29 실기) · 예외 6종 복구와 빈 구역 건너뛰기 실기 확인
-
-<br>
-
-### [AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/amr-cobot-sorting)
-
-Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A/B/C·불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
-
-`ROKEY 협동-3` · `4인 팀` · `2026.08` · `Isaac Sim 5.1` · `ROS 2 Jazzy` · `Lula IK`
-
-<img src="https://raw.githubusercontent.com/rokey-c2/cobot3-ws-c2/main/docs/screenshots/top-view-x5.gif" width="640" alt="Warehouse Top View — AMR, P3020, Conveyor, Wheel Sorter 전체 공정">
-
-**담당: P3020 협동로봇 Pick & Place · 비전 연동**
-- Pick & Place를 8단계 상태 머신으로 작성하고, IK 목표에 TCP 오프셋 보정과 관절 안전 한계를 넣었습니다.
-- 팀원이 만든 YOLO 검출 결과와 Depth로 박스 윗면의 3D 좌표를 구하고, 거리·색상·높이 3단 필터로 그리퍼·그림자·AMR 몸체 오탐을 걸렀습니다.
-- Isaac Sim 내장 Python(3.11)에서 ROS 2 커스텀 액션 서버가 실패하는 문제를, 액션 서버를 시스템 Python 프로세스로 분리하고 토픽으로 잇는 방식으로 해결했습니다.
-- 불량품 라인(P3020 OUT)은 입고 쪽 IK·상태 머신·좌표 계산 로직을 재사용해 작성하고, 팔에서 먼 칸부터 2×2로 채우는 적재 순서를 적용했습니다.
 
 <br>
 
