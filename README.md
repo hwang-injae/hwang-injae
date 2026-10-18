@@ -71,11 +71,11 @@ ROKEY 9기 정규 팀 프로젝트입니다.
   </tr>
 </table>
 
-**담당: PL · HMI(웹 화면 · AI 설계 생성 · 설계 DB · MQTT 다리)**
-- **AI 설계 생성** — 웹 PC의 Claude Code를 호스트 중계(`claude_bridge`)로 불러 설계도 후보 3개를 만들게 했습니다. JSON Schema 구조화 출력으로 형식 실패 0, 검사에서 떨어지면 까닭을 돌려줘 최대 2번 다시 만듭니다.
-- **설계 DB 세대 관리** — PostgreSQL에 설계를 부모·버전으로 이어 저장하고, 같은 Template의 설계를 AI가 골라 참고하는 RAG를 붙였습니다(파생 설계 15개·3세대).
-- **웹 화면 · MQTT 다리** — Next.js + three.js 화면(설계 3D 미리보기·손목 카메라·로봇 패널), 로봇 PC와 웹 PC를 잇는 MQTT 다리, 웹 PC Docker compose 구성을 맡았습니다.
-- **PL** — 일정·결정 기록·발표를 맡고, 기능 동결 뒤에는 PL 통합 브랜치(1~10차)에서 통합 테스트를 거친 판만 main에 넣었습니다.
+**담당: PL · HMI(웹 화면 · AI 설계 생성 · 설계 DB · MQTT 브리지)**
+- **AI 설계 생성** — 웹 PC의 Claude Code를 호스트 중계(`claude_bridge`)로 불러 설계도 후보 3개를 만들게 했습니다. JSON Schema 구조화 출력으로 형식 실패 0, 검사에서 떨어지면 실패 원인을 AI에 다시 전달해 최대 2번 다시 생성합니다.
+- **설계 DB 세대 관리** — PostgreSQL에 설계를 부모·버전으로 이어 저장하고, 같은 Template의 설계를 AI가 골라 참고하는 RAG를 적용했습니다(파생 설계 15개·3세대).
+- **웹 화면 · MQTT 브리지** — Next.js + three.js 화면(설계 3D 미리보기·손목 카메라·로봇 패널), 로봇 PC와 웹 PC를 잇는 MQTT 브리지, 웹 PC Docker compose 구성을 맡았습니다.
+- **PL** — 일정·결정 기록·발표를 맡고, 기능 동결 뒤에는 PL 통합 브랜치(1~10차)에서 통합 테스트를 거친 버전만 main에 병합했습니다.
 
 **결과(팀):** 통합 시험에서 흩어진 블록 집기 98%(162번 중 159번) · 스캔 복원 일치율 92% · AI 설계 형식 실패 0 · AI가 만든 설계 2종 실제 조립
 
@@ -87,7 +87,7 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 `ROKEY 협동-3` · `4인 팀` · `2026.08` · `Isaac Sim 5.1` · `ROS 2 Jazzy` · `Lula IK`
 
-<img src="https://raw.githubusercontent.com/rokey-c2/cobot3-ws-c2/main/docs/screenshots/top-view-x5.gif" width="640" alt="Warehouse Top View — AMR, P3020, Conveyor, Wheel Sorter 전체 공정">
+<img src="https://raw.githubusercontent.com/hwang-injae/amr-cobot-sorting/main/docs/screenshots/top-view-x5.gif" width="640" alt="Warehouse Top View — AMR, P3020, Conveyor, Wheel Sorter 전체 공정">
 
 **담당: P3020 협동로봇 Pick & Place · 비전 연동**
 - Pick & Place를 8단계 상태 머신으로 작성하고, IK 목표에 TCP 오프셋 보정과 관절 안전 한계를 넣었습니다.
@@ -106,12 +106,12 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 <img src="https://raw.githubusercontent.com/hwang-injae/prewash-cell/main/docs/images/hmi_running.png" width="640" alt="PreWash-Cell 운영 화면">
 
-**담당: PM · 인터페이스 · 운영 화면(HMI)·기록 DB · 셀 통합**
+**담당: PM · 인터페이스 · 운영 화면(HMI) · 기록 DB · 셀 통합**
 - 두산 Python API가 ROS 콜백 안에서 멈추는 문제를 재현·확인하고, 실행 구조 5가지를 비교해 구조 변경을 결정했습니다. 기능 사이 인터페이스(`contracts.py`)를 먼저 고정해 4명이 로봇 1대를 나눠 쓰면서도 각자 개발할 기준을 만들었습니다.
 - 운영 화면(시작·일시정지·재개·중단, 멈춤 원인 안내, 누적 통계)과 SQLite 기록 DB를 맡았습니다.
 - 셀 통합과 실기 운용을 맡아 기능 동결 시점과 "기본 흐름은 유지하고 예외 처리만 고친다"는 원칙을 정했고, 무게값이 출렁이는 원인(그리퍼 케이블 장력)을 찾아냈습니다.
 
-**결과(팀):** 배속 1.0에서 그릇 2개·컵 2개를 사람 개입 없이 무정지 완주(약 13분, 9/29 실기) · 예외 6종 복구와 빈 구역 건너뛰기 실기 확인
+**결과(팀):** 배속 1.0에서 그릇 2개·컵 2개를 사람 개입 없이 무정지 완주(약 13분, 9/29 실기) · 예외 7종 실기 복구(빈 구역 건너뛰기 포함)
 
 <br>
 
@@ -140,8 +140,8 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도�
 
 **담당: 상태 · 이동 제어**
 - 제어 인터페이스 약속(오차 부호 · QoS · 정지 규칙)을 제안해 팀 문서에 반영했습니다.
-- 비례 제어(회전 · 전진)와 추적 상태 머신, 안전 정지 3가지(STOP · 미검출 · 신호 끊김)를 설계 · 구현했습니다.
-- 단위 시험을 쓰고, 통합 테스트로 게인을 보정했습니다.
+- 비례 제어(회전 · 전진)와 추적 상태 머신, 안전 정지 3가지(STOP · 미검출 · 신호 끊김)를 맡아 설계 · 구현했습니다.
+- 단위 테스트를 작성하고, 통합 테스트로 게인을 보정했습니다.
 
 <br>
 
