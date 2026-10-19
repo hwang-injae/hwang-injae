@@ -11,8 +11,8 @@
 - 🎓 **국립부경대학교 화학과 졸업 예정**입니다.
 - 🧪 지금은 **Physical AI · 로보틱스 소프트웨어** 분야로 커리어를 전환하고 있습니다.
 - 💡 AI가 사회를 빠르게 바꾸는 모습을 보며 AI를 더 깊이 공부하고 싶어졌고, AI가 실제 세계에서 움직이는 로보틱스로 방향을 정했습니다.
-- 🤖 **두산로보틱스 ROKEY 부트캠프**에서 Python, Computer Vision, ROS 2, 협동로봇·지능형로봇 프로그래밍을 학습하고 있습니다. (2026.04 ~ 2026.10)
-- 🔨 부트캠프에서 팀 프로젝트를 진행하며 실무 흐름을 익히고 있습니다.
+- 🤖 **두산로보틱스 ROKEY 부트캠프**에서 Python, Computer Vision, ROS 2, 협동로봇·지능형로봇 프로그래밍을 배우고 수료했습니다. (2026.04 ~ 2026.10)
+- 🔨 부트캠프에서 팀 프로젝트 4개를 진행하며 요구사항 정리부터 통합 · 시연까지 실무 흐름을 익혔습니다.
 
 <br>
 
@@ -25,11 +25,8 @@
 
 ## 🌱 Currently Learning
 
-- ROS 2 (topics, services, actions, launch) — Python
-- 협동로봇 / 지능형로봇 프로그래밍
-- NVIDIA Isaac Sim 기반 로봇 시뮬레이션
-- OpenCV 기반 이미지 처리 · 객체 인식
-- PyTorch 기반 딥러닝 인식(perception)
+- 팀 프로젝트 코드 다시 읽기 — 직접 맡지 않은 파트(MoveIt2 경로 계획 · 두산 힘 제어 · Nav2 순찰)까지 동작 원리를 정리하고 있습니다.
+- C++ · rclcpp — 2026년 12월부터 ROS 2 노드를 C++로 작성하는 공부를 시작합니다.
 
 <br>
 
@@ -37,15 +34,27 @@
 
 **Robotics**<br>
 ![ROS 2](https://img.shields.io/badge/ROS_2-22314E?style=for-the-badge&logo=ros&logoColor=white)
-![Gazebo](https://img.shields.io/badge/Gazebo-F58113?style=for-the-badge&logoColor=white)
+![Doosan M0609](https://img.shields.io/badge/Doosan_M0609-0068B7?style=for-the-badge)
 ![Isaac Sim](https://img.shields.io/badge/Isaac_Sim-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![Gazebo](https://img.shields.io/badge/Gazebo-F58113?style=for-the-badge)
 
-**Vision**<br>
+**Vision · AI**<br>
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![YOLO (Ultralytics)](https://img.shields.io/badge/YOLO_%28Ultralytics%29-111F68?style=for-the-badge)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=mediapipe&logoColor=white)
+
+**Web · Data**<br>
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![three.js](https://img.shields.io/badge/three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![MQTT](https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 **Language · Tools**<br>
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
@@ -151,7 +160,7 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도�
 
 <br>
 
-## 🧪 실습 모음
+## 🧪 Mini Projects
 
 본 프로젝트를 준비하며 장비와 도구를 익힌 실습들입니다(M0609 기어 조립 DRL의 ROS 2 변환 · Isaac Sim 색상 분류 · TurtleBot4 RC카 추적). → [rokey-mini-projects](https://github.com/hwang-injae/rokey-mini-projects)
 
