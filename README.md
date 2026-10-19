@@ -72,9 +72,9 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 </table>
 
 **담당: PL · HMI(웹 화면 · AI 설계 생성 · 설계 DB · MQTT 브리지) · YOLO seg 학습**
-- **AI 설계 생성** — 웹 PC의 Claude Code를 호스트 중계(`claude_bridge`)로 불러 설계도 후보 3개를 만들게 했습니다. JSON Schema 구조화 출력으로 형식 실패 0, 검사에서 떨어지면 실패 원인을 AI에 다시 전달해 최대 2번 다시 생성합니다.
+- **AI 설계 생성** — 웹 PC의 Claude Code를 호스트 중계(`claude_bridge`)로 불러 설계도 후보 3개를 만들게 했습니다. JSON Schema 구조화 출력으로 형식 실패 0, 검사를 통과하지 못하면 실패 원인을 AI에 다시 전달해 최대 2번 다시 생성합니다.
 - **설계 DB 세대 관리** — PostgreSQL에 설계를 부모·버전으로 이어 저장하고, 같은 Template의 설계를 AI가 골라 참고하는 RAG를 적용했습니다(파생 설계 15개·3세대).
-- **웹 화면 · MQTT 브리지** — Next.js + three.js 화면(설계 3D 미리보기·손목 카메라·로봇 패널), 로봇 PC와 웹 PC를 잇는 MQTT 브리지, 웹 PC Docker compose 구성을 맡았습니다.
+- **웹 화면 · MQTT 브리지** — Next.js + three.js 화면(설계 3D 미리보기·손목 카메라·로봇 패널), 로봇 PC와 웹 PC를 잇는 MQTT 브리지, 웹 PC Docker Compose 구성을 맡았습니다.
 - **YOLO seg 학습 · 라벨링** — 흩어진 블록을 찾는 YOLO seg의 학습 데이터를 라벨링하고 yolo26s-seg 비교 학습을 맡았습니다(최종 모델 mAP50 0.972).
 - **PL** — 일정·결정 기록·발표를 맡고, 기능 동결 뒤에는 PL 통합 브랜치(1~10차)에서 통합 테스트를 거친 버전만 main에 병합했습니다.
 
@@ -84,7 +84,7 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 ### [AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/amr-cobot-sorting)
 
-Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A/B/C·불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
+Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A·B·C · 불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
 
 `ROKEY 협동-3` · `4인 팀` · `2026.08` · `Isaac Sim 5.1` · `ROS 2 Jazzy` · `Lula IK`
 
@@ -94,7 +94,7 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 - Pick & Place를 8단계 상태 머신으로 작성하고, IK 목표에 TCP 오프셋 보정과 관절 안전 한계를 넣었습니다.
 - 팀원이 만든 YOLO 검출 결과와 Depth로 박스 윗면의 3D 좌표를 구하고, 거리·색상·높이 3단 필터로 그리퍼·그림자·AMR 몸체 오탐을 걸렀습니다.
 - Isaac Sim 내장 Python(3.11)에서 ROS 2 커스텀 액션 서버가 실패하는 문제를, 액션 서버를 시스템 Python 프로세스로 분리하고 토픽으로 잇는 방식으로 해결했습니다.
-- 불량품 라인(P3020 OUT)은 입고 쪽 IK·상태 머신·좌표 계산 로직을 재사용해 작성하고, 팔에서 먼 칸부터 2×2로 채우는 적재 순서를 적용했습니다.
+- 불량품 라인(P3020 OUT)은 입고 쪽 IK·상태 머신·비전 로직을 재사용해 작성하고, 적재 계획 모듈(`OutboundLoadPlanner`)을 실제 에이전트에 처음 연결했습니다.
 
 <br>
 
@@ -105,12 +105,17 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 `ROKEY 협동-1` · `4인 팀` · `2026.09` · `Doosan M0609 + OnRobot RG2` · `ROS 2 Jazzy` · `FastAPI · Next.js · SQLite`
 
-<img src="https://raw.githubusercontent.com/hwang-injae/prewash-cell/main/docs/images/hmi_running.png" width="640" alt="PreWash-Cell 운영 화면">
+<table>
+  <tr>
+    <td align="center"><img src="https://raw.githubusercontent.com/hwang-injae/prewash-cell/main/docs/images/demo/demo_cup_wipe.gif" height="240" alt="컵 안쪽을 솔로 위아래 · 손목 회전하며 닦기"><br><sub>컵 안쪽 닦기(2배속)</sub></td>
+    <td align="center"><img src="https://raw.githubusercontent.com/hwang-injae/prewash-cell/main/docs/images/demo/demo_nudge_resume.gif" height="240" alt="멈춘 로봇팔을 손으로 가볍게 밀어 재개"><br><sub>멈춘 팔을 가볍게 밀어 재개</sub></td>
+  </tr>
+</table>
 
-**담당: PM · 인터페이스 · 운영 화면(HMI) · 기록 DB · 셀 통합**
-- 두산 Python API가 ROS 콜백 안에서 멈추는 문제를 재현·확인하고, 실행 구조 5가지를 비교해 구조 변경을 결정했습니다. 기능 사이 인터페이스(`contracts.py`)를 먼저 고정해 4명이 로봇 1대를 나눠 쓰면서도 각자 개발할 기준을 만들었습니다.
+**담당: PM · 인터페이스 · 운영 화면(HMI) · 기록 DB · 셀 통합 · 무게 측정 안정화**
+- 팀원이 찾은 문제(ROS 서비스 콜백 안에서 두산 API를 부르면 멈춤)를 실제 드라이버로 다시 확인하고, 실행 구조 5가지를 비교 시험해 구조 변경을 결정했습니다. 기능 사이 인터페이스(`contracts.py`)를 먼저 고정해 4명이 로봇 1대를 나눠 쓰면서도 각자 개발할 기준을 만들었습니다.
 - 운영 화면(시작·일시정지·재개·중단, 멈춤 원인 안내, 누적 통계)과 SQLite 기록 DB를 맡았습니다.
-- 셀 통합과 실기 운용을 맡아 기능 동결 시점과 "기본 흐름은 유지하고 예외 처리만 고친다"는 원칙을 정했고, 무게값이 출렁이는 원인(그리퍼 케이블 장력)을 찾아냈습니다.
+- 셀 통합과 실기 운용을 맡아 기능 동결 시점과 "기본 흐름은 유지하고 예외 처리만 고친다"는 원칙을 정했고, 무게 측정값이 출렁이는 원인(그리퍼 케이블 장력)을 찾아냈습니다.
 
 **결과(팀):** 배속 1.0에서 그릇 2개·컵 2개를 사람 개입 없이 무정지 완주(약 13분, 9/29 실기) · 예외 7종 실기 복구(빈 구역 건너뛰기 포함)
 
@@ -124,8 +129,8 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도�
 
 <img src="https://raw.githubusercontent.com/hwang-injae/idc-patrol-robot/main/docs/images/demo.gif" width="640" alt="랙 도어 YOLO 검출과 로봇 2대 매핑 화면">
 
-**담당: PM(프로젝트 매니저) — 시스템 구조도 · 설계 문서 · 일정 · 데이터**
-- PC 4대 전체 구조도와 발표용 파트별 구조도 3장(AMR·Vision·관제)을 설계 문서의 최신 결정에 맞춰 정리하고, 요구사항·설계 문서(BRD·SRD·SDD) 작성과 개정에 참여했습니다.
+**담당: PM(프로젝트 매니저) — 시스템 구성도 · 설계 문서 · 일정 · 데이터**
+- 설계 문서(SDD)의 최신 결정을 반영해 PC 4대 전체 구성도(draw.io)와 발표용 파트별 구성도 3종(AMR·Vision·관제)을 작성하고, 요구사항·설계 문서(BRD·SRD·SDD) 작성과 개정에 참여했습니다.
 - 9/7부터 팀원별 할 일을 정해 알리고, 진행 상황을 받아 일정을 조정했습니다.
 - 라벨링 환경과 초기 라벨링 가이드·검수 규칙을 만들고, 도어 열림/닫힘 데이터 수집과 라벨링에 참여했습니다.
 
@@ -148,7 +153,7 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도�
 
 ## 🧪 실습 모음
 
-본 프로젝트를 준비하며 장비와 도구를 익힌 실습들입니다(M0609 기어 조립 DRL → ROS 2 · Isaac Sim 색상 분류 · TurtleBot4 RC카 추적). → [rokey-mini-projects](https://github.com/hwang-injae/rokey-mini-projects)
+본 프로젝트를 준비하며 장비와 도구를 익힌 실습들입니다(M0609 기어 조립 DRL의 ROS 2 변환 · Isaac Sim 색상 분류 · TurtleBot4 RC카 추적). → [rokey-mini-projects](https://github.com/hwang-injae/rokey-mini-projects)
 
 <br>
 
