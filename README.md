@@ -145,24 +145,16 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도�
 
 <br>
 
-## 📚 Study Project
-
-### [Gesture-Controlled Robot Tracking — 손 제스처로 켜고 끄는 물체 추적 로봇](https://github.com/hwang-injae/gesture-controlled-robot-tracking)
-
-보자기 → 추적 시작, 주먹 → 정지. 카메라가 HSV 색상으로 찾은 빨간 공을 turtlesim · Gazebo 로봇이 따라갑니다.
-
-`ROKEY 스터디` · `5인 팀` · `2026.07 ~ 08` · `ROS 2 Jazzy` · `OpenCV · MediaPipe` · `turtlesim · Gazebo`
-
-**담당: 상태 · 이동 제어**
-- 제어 인터페이스 약속(오차 부호 · QoS · 정지 규칙)을 제안해 팀 문서에 반영했습니다.
-- 비례 제어(회전 · 전진)와 추적 상태 머신, 안전 정지 3가지(STOP · 미검출 · 신호 끊김)를 맡아 설계 · 구현했습니다.
-- 단위 테스트를 작성하고, 통합 테스트로 게인을 보정했습니다.
-
-<br>
-
 ## 🧪 Mini Projects
 
-본 프로젝트를 준비하며 장비와 도구를 익힌 실습들입니다(M0609 기어 조립 DRL의 ROS 2 변환 · Isaac Sim 색상 분류 · TurtleBot4 RC카 추적). → [rokey-mini-projects](https://github.com/hwang-injae/rokey-mini-projects)
+본 프로젝트 사이사이에 진행한 스터디 · 실습 프로젝트입니다. 자세한 내용은 각 저장소 README에 있습니다.
+
+| 프로젝트 | 내용 · 담당 | 스택 | 저장소 |
+|---|---|---|---|
+| 손 제스처로 켜고 끄는 물체 추적 로봇 | 보자기 → 출발, 주먹 → 정지. 빨간 공을 장애물처럼 보고 가까워질수록 감속해 목표 거리에서 정지하는 추적 제어 (스터디 · 5인 팀 · 2026.07 ~ 08) · **담당: 상태 · 이동 제어, 단위 테스트** | ROS 2 · OpenCV · MediaPipe · turtlesim · Gazebo | [gesture-controlled-robot-tracking](https://github.com/hwang-injae/gesture-controlled-robot-tracking) |
+| M0609 기어 조립 DRL → ROS 2 | 티치 펜던트 DRL 동작을 ROS 2 Python으로 옮겨 실제 로봇에서 완주 (협동-1 사전 실습 · 개인) | Doosan M0609 · RG2 · 힘 제어 | [rokey-mini-projects](https://github.com/hwang-injae/rokey-mini-projects/tree/main/m0609-gear-drl-to-ros2) |
+| Isaac Sim M0609 색상 분류 | 카메라 영상에서 큐브 색을 판별해 로봇팔이 마커로 옮기게 하는 ROS 2 색 감지 노드 (협동-3 사전 실습 · 4인) · **담당: 색 감지 노드 수정 · Isaac Sim 연동** | Isaac Sim · ROS 2 · OpenCV | [rokey-mini-projects](https://github.com/hwang-injae/rokey-mini-projects/tree/main/isaac-m0609-color-sort) |
+| TurtleBot4 RC카 탐색 · 추적 | 고정 웹캠이 RC카를 찾으면 TurtleBot4가 출동해 회전 탐색 · 추종하는 미션 (지능-1 미니 프로젝트 · 4인) · **담당: 객체 탐지(YOLO11n · ByteTrack)** | TurtleBot4 · Nav2 · YOLO | [rokey-mini-projects](https://github.com/hwang-injae/rokey-mini-projects/tree/main/tb4-rc-car-search-track) |
 
 <br>
 
