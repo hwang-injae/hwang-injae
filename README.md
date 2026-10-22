@@ -166,9 +166,11 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도�
 
 ## 📫 Connect
 
+<p align="center">
 <a href="https://hwang-injae.github.io/"><img src="assets/website.svg" width="40" alt="포트폴리오 웹사이트"></a>&nbsp;
 <a href="mailto:il1282113@gmail.com"><img src="assets/gmail.svg" width="40" alt="Gmail"></a>&nbsp;
 <a href="https://www.linkedin.com/in/hwang-injae/"><img src="assets/linkedin.svg" width="40" alt="LinkedIn"></a>
+</p>
 
 <!-- 공개 저장소에 커밋이 쌓이면 아래 주석을 풀어 통계 카드를 활성화하세요
 ## 📊 GitHub Stats
