@@ -74,6 +74,9 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 ### BuildMind — AI가 설계하고 로봇이 조립하는 젠가 가구
 
+<a href="https://github.com/hwang-injae/buildmind"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
+<a href="https://app.notion.com/p/401f5144f244818c97cbdf9a395181ca"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
+
 사람이 글이나 말로 가구를 요청하면 AI(Claude)가 젠가 블록 설계도를 만들고, 무너지지 않는지·로봇이 지을 수 있는지 검사를 통과한 설계만 DB에 세대별로 저장합니다.
 두산 M0609가 흩어진 블록을 손목 카메라(**YOLO seg + 깊이**)로 찾아 **MoveIt2**로 하나씩 집어 조립하고, 사람이 쌓은 구조물을 스캔해 똑같이 복제할 수도 있습니다.
 
@@ -95,12 +98,12 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 **결과(팀):** 통합 시험에서 흩어진 블록 집기 98%(162번 중 159번) · 스캔 복원 일치율 92% · AI 설계 형식 실패 0 · AI가 만든 설계 2종 실제 조립
 
-<a href="https://github.com/hwang-injae/buildmind"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
-<a href="https://app.notion.com/p/401f5144f244818c97cbdf9a395181ca"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
-
 <br>
 
 ### SortTwin — AMR × 협동로봇 택배 분류 디지털 트윈
+
+<a href="https://github.com/hwang-injae/amr-cobot-sorting"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
+<a href="https://app.notion.com/p/401f5144f24481e4a4a8dcf259c55da4"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
 
 Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A·B·C · 불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
 
@@ -114,12 +117,12 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 - Isaac Sim 내장 Python(3.11)에서 ROS 2 커스텀 액션 서버가 실패하는 문제를, 액션 서버를 시스템 Python 프로세스로 분리하고 토픽으로 잇는 방식으로 해결했습니다.
 - 불량품 라인(P3020 OUT)은 입고 쪽 IK·상태 머신·비전 로직을 재사용해 작성하고, 적재 계획 모듈(`OutboundLoadPlanner`)을 실제 에이전트에 처음 연결했습니다.
 
-<a href="https://github.com/hwang-injae/amr-cobot-sorting"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
-<a href="https://app.notion.com/p/401f5144f24481e4a4a8dcf259c55da4"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
-
 <br>
 
 ### PreWash-Cell — 다회용기 예비세척 자동화 셀
+
+<a href="https://github.com/hwang-injae/prewash-cell"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
+<a href="https://app.notion.com/p/401f5144f2448190b54bd0d5fa624d30"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
 
 두산 M0609 협동로봇이 반납된 다회용 그릇·컵을 집어 잔반을 털고, 안쪽을 힘 제어로 닦아 식기세척기 팔레트에 꽂는 자동화 셀입니다.
 카메라 없이 **파지 폭 · 무게 · 힘**만으로 판단합니다.
@@ -140,12 +143,12 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 **결과(팀):** 배속 1.0에서 그릇 2개·컵 2개를 사람 개입 없이 무정지 완주(약 13분, 9/29 실기) · 예외 7종 실기 복구(빈 구역 건너뛰기 포함)
 
-<a href="https://github.com/hwang-injae/prewash-cell"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
-<a href="https://app.notion.com/p/401f5144f2448190b54bd0d5fa624d30"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
-
 <br>
 
 ### IDC Patrol — TurtleBot4 2대 협동 순찰 MVP
+
+<a href="https://github.com/hwang-injae/idc-patrol-robot"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
+<a href="https://app.notion.com/p/401f5144f24481d0bfd7d69a1d37d514"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
 
 TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 팀 MVP입니다. 로봇 2대 분담 SLAM 매핑 · 지도 병합과 실제 카메라의 도어 검출까지 시연했습니다.
 
@@ -157,9 +160,6 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도�
 - 설계 문서(SDD)의 최신 결정을 반영해 PC 4대 전체 구성도(draw.io)와 발표용 파트별 구성도 3종(AMR·Vision·관제)을 작성하고, 요구사항·설계 문서(BRD·SRD·SDD) 작성과 개정에 참여했습니다.
 - 9/7부터 팀원별 할 일을 정해 알리고, 진행 상황을 받아 일정을 조정했습니다.
 - 라벨링 환경과 초기 라벨링 가이드·검수 규칙을 만들고, 도어 열림/닫힘 데이터 수집과 라벨링에 참여했습니다.
-
-<a href="https://github.com/hwang-injae/idc-patrol-robot"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
-<a href="https://app.notion.com/p/401f5144f24481d0bfd7d69a1d37d514"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
 
 <br>
 
