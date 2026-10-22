@@ -71,7 +71,7 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 사람이 글이나 말로 가구를 요청하면 AI(Claude)가 젠가 블록 설계도를 만들고, 무너지지 않는지·로봇이 지을 수 있는지 검사를 통과한 설계만 DB에 세대별로 저장합니다.
 두산 M0609가 흩어진 블록을 손목 카메라(**YOLO seg + 깊이**)로 찾아 **MoveIt2**로 하나씩 집어 조립하고, 사람이 쌓은 구조물을 스캔해 똑같이 복제할 수도 있습니다.
 
-`ROKEY 협동-2` · `5인 팀` · `2026.10` · `Doosan M0609 + OnRobot RG2` · `ROS 2 Jazzy · MoveIt2` · `YOLO seg` · `FastAPI · Next.js · PostgreSQL · MQTT`
+`ROKEY 협동-2` · `5인 팀` · `2026.10` · `Doosan M0609 + OnRobot RG2` · `ROS 2 Jazzy · MoveIt2` · `YOLO seg` · `FastAPI · Next.js · PostgreSQL · MQTT` · 📝 [Notion 정리](https://app.notion.com/p/401f5144f244818c97cbdf9a395181ca)
 
 <table>
   <tr>
@@ -95,7 +95,7 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A·B·C · 불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
 
-`ROKEY 협동-3` · `4인 팀` · `2026.08` · `Isaac Sim 5.1` · `ROS 2 Jazzy` · `Lula IK`
+`ROKEY 협동-3` · `4인 팀` · `2026.08` · `Isaac Sim 5.1` · `ROS 2 Jazzy` · `Lula IK` · 📝 [Notion 정리](https://app.notion.com/p/401f5144f24481e4a4a8dcf259c55da4)
 
 <img src="https://raw.githubusercontent.com/hwang-injae/amr-cobot-sorting/main/docs/screenshots/top-view-x5.gif" width="640" alt="Warehouse Top View — AMR, P3020, Conveyor, Wheel Sorter 전체 공정">
 
@@ -112,7 +112,7 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 두산 M0609 협동로봇이 반납된 다회용 그릇·컵을 집어 잔반을 털고, 안쪽을 힘 제어로 닦아 식기세척기 팔레트에 꽂는 자동화 셀입니다.
 카메라 없이 **파지 폭 · 무게 · 힘**만으로 판단합니다.
 
-`ROKEY 협동-1` · `4인 팀` · `2026.09` · `Doosan M0609 + OnRobot RG2` · `ROS 2 Jazzy` · `FastAPI · Next.js · SQLite`
+`ROKEY 협동-1` · `4인 팀` · `2026.09` · `Doosan M0609 + OnRobot RG2` · `ROS 2 Jazzy` · `FastAPI · Next.js · SQLite` · 📝 [Notion 정리](https://app.notion.com/p/401f5144f2448190b54bd0d5fa624d30)
 
 <table>
   <tr>
@@ -134,7 +134,7 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 팀 MVP입니다. 로봇 2대 분담 SLAM 매핑 · 지도 병합과 실제 카메라의 도어 검출까지 시연했습니다.
 
-`ROKEY 지능-1` · `8인 팀` · `2026.09 (6일)` · `ROS 2 Jazzy` · `TurtleBot4 · Nav2` · `YOLO`
+`ROKEY 지능-1` · `8인 팀` · `2026.09 (6일)` · `ROS 2 Jazzy` · `TurtleBot4 · Nav2` · `YOLO` · 📝 [Notion 정리](https://app.notion.com/p/401f5144f24481d0bfd7d69a1d37d514)
 
 <img src="https://raw.githubusercontent.com/hwang-injae/idc-patrol-robot/main/docs/images/demo.gif" width="640" alt="랙 도어 YOLO 검출과 로봇 2대 매핑 화면">
 
