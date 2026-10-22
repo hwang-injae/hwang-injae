@@ -167,8 +167,8 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도�
 
 본 프로젝트 사이사이에 진행한 실습 · 팀 미니 프로젝트입니다. 자세한 내용은 각 저장소 README에 있습니다.
 
-| 프로젝트 | 내용 · 담당 | 스택 | 저장소 |
-|---|---|---|---|
+| 프로젝트 | 내용 · 담당 | 스택 | GitHub |
+|---|---|---|:---:|
 | 손 제스처로 켜고 끄는 물체 추적 로봇 | 보자기 → 출발, 주먹 → 정지. 빨간 공을 장애물처럼 보고 가까워질수록 감속해 목표 거리에서 정지하는 추적 제어 (팀 프로젝트 · 2026.07 ~ 08) · **담당: 상태 · 이동 제어, 단위 테스트** | ROS 2 · OpenCV · MediaPipe · turtlesim · Gazebo | <a href="https://github.com/hwang-injae/gesture-controlled-robot-tracking"><img src="assets/repo.svg" width="32" alt="gesture-controlled-robot-tracking 저장소"></a> |
 | M0609 기어 조립 DRL → ROS 2 | 티치 펜던트 DRL 동작을 ROS 2 Python으로 옮겨 실제 로봇에서 완주 (협동-1 사전 실습 · 개인) | Doosan M0609 · RG2 · 힘 제어 | <a href="https://github.com/hwang-injae/rokey-mini-projects/tree/main/m0609-gear-drl-to-ros2"><img src="assets/repo.svg" width="32" alt="rokey-mini-projects 저장소"></a> |
 | Isaac Sim M0609 색상 분류 | 카메라 영상에서 큐브 색을 판별해 로봇팔이 마커로 옮기게 하는 ROS 2 색 감지 노드 (협동-3 사전 실습 · 4인) · **담당: 색 감지 노드 수정 · Isaac Sim 연동** | Isaac Sim · ROS 2 · OpenCV | <a href="https://github.com/hwang-injae/rokey-mini-projects/tree/main/isaac-m0609-color-sort"><img src="assets/repo.svg" width="32" alt="rokey-mini-projects 저장소"></a> |
