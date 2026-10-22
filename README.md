@@ -91,7 +91,7 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 <br>
 
-### [AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/amr-cobot-sorting)
+### [SortTwin — AMR × 협동로봇 택배 분류 디지털 트윈](https://github.com/hwang-injae/amr-cobot-sorting)
 
 Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A·B·C · 불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
 
@@ -130,7 +130,7 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 <br>
 
-### [IDC 순찰로봇 — TurtleBot4 2대 협동 순찰 MVP](https://github.com/hwang-injae/idc-patrol-robot)
+### [IDC Patrol — TurtleBot4 2대 협동 순찰 MVP](https://github.com/hwang-injae/idc-patrol-robot)
 
 TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 팀 MVP입니다. 로봇 2대 분담 SLAM 매핑 · 지도 병합과 실제 카메라의 도어 검출까지 시연했습니다.
 
