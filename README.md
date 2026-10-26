@@ -105,7 +105,7 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 <a href="https://github.com/hwang-injae/amr-cobot-sorting"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
 <a href="https://app.notion.com/p/401f5144f24481e4a4a8dcf259c55da4"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
 
-Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A·B·C · 불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다.
+Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동로봇(P3020) 상차 → 컨베이어 → 휠소터 분류(권역 A·B·C · 불량) → 두 번째 협동로봇의 불량품 적재까지 전 공정을 한 미션으로 연결했습니다(8/28 제출본은 불량 박스가 두 번째 협동로봇 앞에 도착하는 데까지, 적재는 이후 팀에서 보완해 완성).
 
 `ROKEY 협동-3` · `4인 팀` · `2026.08` · `Isaac Sim 5.1` · `ROS 2 Jazzy` · `Lula IK`
 
@@ -115,7 +115,7 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 - Pick & Place를 8단계 상태 머신으로 작성하고, IK 목표에 TCP 오프셋 보정과 관절 안전 한계를 넣었습니다.
 - 팀원이 만든 YOLO 검출 결과와 Depth로 박스 윗면의 3D 좌표를 구하고, 거리·색상·높이 3단 필터로 그리퍼·그림자·AMR 몸체 오탐을 걸렀습니다.
 - Isaac Sim 내장 Python(3.11)에서 ROS 2 커스텀 액션 서버가 실패하는 문제를, 액션 서버를 시스템 Python 프로세스로 분리하고 토픽으로 잇는 방식으로 해결했습니다.
-- 불량품 라인(P3020 OUT)은 입고 쪽 IK·상태 머신·비전 로직을 재사용해 작성하고, 적재 계획 모듈(`OutboundLoadPlanner`)을 실제 에이전트에 처음 연결했습니다.
+- 불량품 라인(P3020 OUT)의 첫 버전을 입고 쪽 IK·상태 머신·비전 로직을 재사용해 작성하고, 적재 계획 모듈(`OutboundLoadPlanner`)을 실제 에이전트에 처음 연결했습니다.
 
 <br>
 
@@ -154,7 +154,7 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 | 손 제스처로 켜고 끄는 물체 추적 로봇 | 보자기 → 출발, 주먹 → 정지. 빨간 공을 장애물처럼 보고 가까워질수록 감속해 목표 거리에서 정지하는 추적 제어 (팀 프로젝트 · 2026.07 ~ 08) · **담당: 상태 · 이동 제어, 단위 테스트** | ROS 2 · OpenCV · MediaPipe · turtlesim · Gazebo | <a href="https://github.com/hwang-injae/gesture-controlled-robot-tracking"><img src="assets/repo.svg" width="32" alt="gesture-controlled-robot-tracking 저장소"></a> |
 | M0609 기어 조립 DRL → ROS 2 | 티치 펜던트 DRL 동작을 ROS 2 Python으로 옮겨 실제 로봇에서 완주 (협동-1 사전 실습 · 개인) | Doosan M0609 · RG2 · 힘 제어 | <a href="https://github.com/hwang-injae/rokey-mini-projects/tree/main/m0609-gear-drl-to-ros2"><img src="assets/repo.svg" width="32" alt="rokey-mini-projects 저장소"></a> |
 | Isaac Sim M0609 색상 분류 | 카메라 영상에서 큐브 색을 판별해 로봇팔이 마커로 옮기게 하는 ROS 2 색 감지 노드 (협동-3 사전 실습 · 4인) · **담당: 색 감지 노드 수정 · Isaac Sim 연동** | Isaac Sim · ROS 2 · OpenCV | <a href="https://github.com/hwang-injae/rokey-mini-projects/tree/main/isaac-m0609-color-sort"><img src="assets/repo.svg" width="32" alt="rokey-mini-projects 저장소"></a> |
-| TurtleBot4 RC카 탐색 · 추적 | 고정 웹캠이 RC카를 찾으면 TurtleBot4가 출동해 회전 탐색 · 추종하는 미션 (지능-1 미니 프로젝트 · 4인) · **담당: 객체 탐지(YOLO11n · ByteTrack)** | TurtleBot4 · Nav2 · YOLO | <a href="https://github.com/hwang-injae/rokey-mini-projects/tree/main/tb4-rc-car-search-track"><img src="assets/repo.svg" width="32" alt="rokey-mini-projects 저장소"></a> |
+| TurtleBot4 RC카 탐색 · 추적 | 고정 웹캠이 RC카를 찾으면 TurtleBot4가 출동해 회전 탐색 · 추종하는 미션 (지능-1 미니 프로젝트 · 4인) · **담당: 객체 탐지(YOLO11n · ByteTrack) · 지도 생성(SLAM · 원격 조종)** | TurtleBot4 · Nav2 · YOLO | <a href="https://github.com/hwang-injae/rokey-mini-projects/tree/main/tb4-rc-car-search-track"><img src="assets/repo.svg" width="32" alt="rokey-mini-projects 저장소"></a> |
 | IDC Patrol — TurtleBot4 2대 협동 순찰 MVP | TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 MVP. 로봇 2대 분담 SLAM 매핑 · 지도 병합과 실제 카메라의 도어 검출까지 시연했고, 전체 통합 시연은 다음 단계 과제로 남김 (지능-1 정규 프로젝트 · 8인 · 2026.09 · 6일) · **담당: PM — 시스템 구성도 · 설계 문서 · 일정 · 데이터 라벨링 기준** | TurtleBot4 · Nav2 · YOLO · ArUco | <a href="https://github.com/hwang-injae/idc-patrol-robot"><img src="assets/repo.svg" width="32" alt="idc-patrol-robot 저장소"></a> |
 
 <br>
