@@ -145,27 +145,9 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 <br>
 
-### IDC Patrol — TurtleBot4 2대 협동 순찰 MVP
+## 🧪 Other Projects
 
-<a href="https://github.com/hwang-injae/idc-patrol-robot"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
-<a href="https://app.notion.com/p/401f5144f24481d0bfd7d69a1d37d514"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
-
-TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 팀 MVP입니다. 로봇 2대 분담 SLAM 매핑 · 지도 병합과 실제 카메라의 도어 검출까지 시연했습니다.
-
-`ROKEY 지능-1` · `8인 팀` · `2026.09 (6일)` · `ROS 2 Jazzy` · `TurtleBot4 · Nav2` · `YOLO`
-
-<img src="https://raw.githubusercontent.com/hwang-injae/idc-patrol-robot/main/docs/images/demo.gif" width="640" alt="랙 도어 YOLO 검출과 로봇 2대 매핑 화면">
-
-**담당: PM(프로젝트 매니저) — 시스템 구성도 · 설계 문서 · 일정 · 데이터**
-- 설계 문서(SDD)의 최신 결정을 반영해 PC 4대 전체 구성도(draw.io)와 발표용 파트별 구성도 3종(AMR·Vision·관제)을 작성하고, 요구사항·설계 문서(BRD·SRD·SDD) 작성과 개정에 참여했습니다.
-- 9/7부터 팀원별 할 일을 정해 알리고, 진행 상황을 받아 일정을 조정했습니다.
-- 라벨링 환경과 초기 라벨링 가이드·검수 규칙을 만들고, 도어 열림/닫힘 데이터 수집과 라벨링에 참여했습니다.
-
-<br>
-
-## 🧪 Mini Projects
-
-본 프로젝트 사이사이에 진행한 실습 · 팀 미니 프로젝트입니다. 자세한 내용은 각 저장소 README에 있습니다.
+정규 팀 프로젝트 중 PM을 맡은 IDC Patrol과, 본 프로젝트 사이사이에 진행한 실습 · 팀 미니 프로젝트입니다. 자세한 내용은 각 저장소 README에 있습니다.
 
 | 프로젝트 | 내용 · 담당 | 스택 | GitHub |
 |---|---|---|:---:|
@@ -173,6 +155,7 @@ TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도�
 | M0609 기어 조립 DRL → ROS 2 | 티치 펜던트 DRL 동작을 ROS 2 Python으로 옮겨 실제 로봇에서 완주 (협동-1 사전 실습 · 개인) | Doosan M0609 · RG2 · 힘 제어 | <a href="https://github.com/hwang-injae/rokey-mini-projects/tree/main/m0609-gear-drl-to-ros2"><img src="assets/repo.svg" width="32" alt="rokey-mini-projects 저장소"></a> |
 | Isaac Sim M0609 색상 분류 | 카메라 영상에서 큐브 색을 판별해 로봇팔이 마커로 옮기게 하는 ROS 2 색 감지 노드 (협동-3 사전 실습 · 4인) · **담당: 색 감지 노드 수정 · Isaac Sim 연동** | Isaac Sim · ROS 2 · OpenCV | <a href="https://github.com/hwang-injae/rokey-mini-projects/tree/main/isaac-m0609-color-sort"><img src="assets/repo.svg" width="32" alt="rokey-mini-projects 저장소"></a> |
 | TurtleBot4 RC카 탐색 · 추적 | 고정 웹캠이 RC카를 찾으면 TurtleBot4가 출동해 회전 탐색 · 추종하는 미션 (지능-1 미니 프로젝트 · 4인) · **담당: 객체 탐지(YOLO11n · ByteTrack)** | TurtleBot4 · Nav2 · YOLO | <a href="https://github.com/hwang-injae/rokey-mini-projects/tree/main/tb4-rc-car-search-track"><img src="assets/repo.svg" width="32" alt="rokey-mini-projects 저장소"></a> |
+| IDC Patrol — TurtleBot4 2대 협동 순찰 MVP | TurtleBot4 2대가 미니 IDC(랙 56기)를 나눠 순찰하며 열린 랙 도어는 YOLO로, 랙 번호는 ArUco 마커로 판별해 관제 웹에 보고하는 MVP. 로봇 2대 분담 SLAM 매핑 · 지도 병합과 실제 카메라의 도어 검출까지 시연했고, 전체 통합 시연은 다음 단계 과제로 남김 (지능-1 정규 프로젝트 · 8인 · 2026.09 · 6일) · **담당: PM — 시스템 구성도 · 설계 문서 · 일정 · 데이터 라벨링 기준** | TurtleBot4 · Nav2 · YOLO · ArUco | <a href="https://github.com/hwang-injae/idc-patrol-robot"><img src="assets/repo.svg" width="32" alt="idc-patrol-robot 저장소"></a> |
 
 <br>
 
