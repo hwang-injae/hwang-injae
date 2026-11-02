@@ -76,6 +76,7 @@ ROKEY 9기 정규 팀 프로젝트입니다.
 
 <a href="https://github.com/hwang-injae/buildmind"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
 <a href="https://app.notion.com/p/401f5144f244818c97cbdf9a395181ca"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
+🎬 [1분 시연 영상](https://github.com/user-attachments/assets/b2ba76bf-ef47-488e-af1e-1aae9185de38)
 
 사람이 글이나 말로 가구를 요청하면 AI(Claude)가 젠가 블록 설계도를 만들고, 무너지지 않는지·로봇이 지을 수 있는지 검사를 통과한 설계만 DB에 세대별로 저장합니다.
 두산 M0609가 흩어진 블록을 손목 카메라(**YOLO seg + 깊이**)로 찾아 **MoveIt2**로 하나씩 집어 조립하고, 사람이 쌓은 구조물을 스캔해 똑같이 복제할 수도 있습니다.
@@ -123,6 +124,7 @@ Isaac Sim으로 만든 물류 디지털 트윈입니다. 입고 AMR → 협동�
 
 <a href="https://github.com/hwang-injae/prewash-cell"><img src="assets/repo.svg" width="40" alt="GitHub 저장소"></a>&nbsp;
 <a href="https://app.notion.com/p/401f5144f2448190b54bd0d5fa624d30"><img src="assets/notion.svg" width="40" alt="Notion 정리"></a>
+🎬 [2분 시연 영상](https://github.com/user-attachments/assets/fe7334f8-1464-4c8a-8df6-dcc02b2ce02a)
 
 두산 M0609 협동로봇이 반납된 다회용 그릇·컵을 집어 잔반을 털고, 안쪽을 힘 제어로 닦아 식기세척기 팔레트에 꽂는 자동화 셀입니다.
 카메라 없이 **파지 폭 · 무게 · 힘**만으로 판단합니다.
